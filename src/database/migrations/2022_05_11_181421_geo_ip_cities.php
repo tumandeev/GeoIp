@@ -17,9 +17,11 @@ class GeoIpCities extends Migration
             $table->id();
             $table->string('city');
             $table->foreignId('country_id');
-            $table->integer('longitude')->default(0);
-            $table->integer('latitude')->default(0);
-            $table->timestamp('recorded_at')->useCurrent();
+            $table->ipAddress('ip_address');
+            $table->float('longitude')->default(0);
+            $table->float('latitude')->default(0);
+            $table->timestamps();
+            $table->index(['ip_address']);
         });
     }
 
