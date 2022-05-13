@@ -15,7 +15,7 @@ class GeoIpCities extends Migration
     {
         Schema::create('geo_ip_cities', function (Blueprint $table) {
             $table->id();
-            $table->string('city');
+            $table->string('name');
             $table->foreignId('country_id');
             $table->ipAddress('ip_address');
             $table->float('longitude')->default(0);

@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-include 'web/ip2geo.php';
-
 Route::get('/', function () {
     return view('welcome');
 });

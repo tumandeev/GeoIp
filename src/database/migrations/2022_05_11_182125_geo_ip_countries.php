@@ -15,7 +15,7 @@ class GeoIpCountries extends Migration
     {
         Schema::create('geo_ip_countries', function (Blueprint $table) {
             $table->id();
-            $table->string('country');
+            $table->string('name');
             $table->timestamps();
         });
     }
